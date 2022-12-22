@@ -1,0 +1,27 @@
+[package]
+name = "klepp-backend-rs"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+axum = "0.6.1"
+diesel = "2.0.2"
+dotenv="0.15.0"
+env_logger = "0.9.0"
+hyper = { version = "0.14.23", features = ["full"] }
+serde = "1.0.151"
+tokio = { version = "1.23.0", features = ["full"] }
+tower = "0.4.13"
+tower-http = { version = "0.3.5", features = ["trace"] }
+tracing = "0.1.37"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+uuid = { version = "1.2.2", features = ["serde"] }
+clap = { version = "4.0.30", features = ["derive", "env"] }
+anyhow = "1.0.68"
+# Remove this ?
+sqlx = { version = "0.6", features = ["runtime-tokio-native-tls", "postgres", "uuid", "time"] }
+thiserror = "1.0.38"
+log = "0.4.17"
+
