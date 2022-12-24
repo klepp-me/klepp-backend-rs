@@ -77,6 +77,7 @@ pub(in crate::http) async fn list_videos(
     _ctx: State<ApiContext>,
     _query: Query<ListVideosQuery>,
 ) -> Result<Json<MultipleVideosBody>> {
+    // https://stackoverflow.com/questions/42917566/what-is-this-question-mark-operator-about
     try_thing()?;
     Ok(Json(MultipleVideosBody {
         response: vec![Video {
